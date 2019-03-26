@@ -1,9 +1,10 @@
 It should
 
-    have a way to display todos
-    have a way to add new todos
-    have a way to change a todo
-    have a way to delete a todo
+
+3    have a way to add new todos
+4    have a way to change a todo
+5    have a way to delete a todo
 
 DONE!
-    have a place to store todos
+1    have a place to store todos
+2    have a way to display todos
