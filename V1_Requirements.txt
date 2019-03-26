@@ -1,1 +1,6 @@
-~
+It should
+    have a place to store todos
+    have a way to display todos
+    have a way to add new todos
+    have a way to change a todo
+    have a way to delete a todo
