@@ -11,3 +11,7 @@ console.log('My Todos: ', todos);
 todos[0] = 'new item 1';
 
 console.log('My Todos: ', todos);
+
+todos.splice(2, 1);
+
+console.log('My Todos: ', todos);
