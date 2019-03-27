@@ -6,16 +6,16 @@ var todoList = {
         console.log('My Todos: ', this.todos);
     },
     addTodo: function (todo) {
-        todoList.todos.push(todo);
-        todoList.displayTodos();
+        this.todos.push(todo);
+        this.displayTodos();
     },
     changeTodo: function (position, newValue) {
-        todoList.todos[position] = newValue;
-        todoList.displayTodos();
+        this.todos[position] = newValue;
+        this.displayTodos();
     },
     deleteTodo: function (position) {
-        todoList.todos.splice(position, 1);
-        todoList.displayTodos();
+        this.todos.splice(position, 1);
+        this.displayTodos();
     }
 };
 
