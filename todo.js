@@ -1,4 +1,4 @@
-"use strict";
+~"use strict";
 
 var todos = ['item 1', 'item 2', 'item 3'];
 
@@ -22,6 +22,9 @@ function changeTodo(position, newValue) {
 
 changeTodo(0, 'Edit Item 1');
 
-todos.splice(2, 1);
+function deleteTodo(position){
+    todos.splice(position, 1);
+    displayTodos();
+}
 
-console.log('My Todos: ', todos);
+deleteTodo(1);

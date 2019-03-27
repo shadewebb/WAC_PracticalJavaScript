@@ -2,9 +2,10 @@ It should
 
 
 
-4     have a function to delete todos
+
 
 DONE!
 1    have a function to display todos
 2    have a function to add todos
 3    have a function to change todos
+4     have a function to delete todos
