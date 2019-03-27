@@ -15,9 +15,12 @@ function addTodo(todo) {
 
 addTodo('New todo test!');
 
-todos[0] = 'new item 1';
+function changeTodo(position, newValue) {
+    todos[position] = newValue;
+    displayTodos();
+}
 
-console.log('My Todos: ', todos);
+changeTodo(0, 'Edit Item 1');
 
 todos.splice(2, 1);
 
