@@ -1,9 +1,10 @@
 It should
 
+
+
+DONE!
+1    store the todos array on an object
 2    have a displayTodos method
 3    have an addTodo method
 4    have a changeTodo method
 5    have a deleteTodo method
-
-DONE!
-1    store the todos array on an object

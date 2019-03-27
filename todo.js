@@ -1,32 +1,28 @@
 ~"use strict";
 
 var todoList = {
-    todos: ['item 1', 'item 2', 'item 3']
+    todos: ['item 1', 'item 2', 'item 3'],
+    displayTodos: function () {
+        console.log('My Todos: ', this.todos);
+    },
+    addTodo: function (todo) {
+        todoList.todos.push(todo);
+        todoList.displayTodos();
+    },
+    changeTodo: function (position, newValue) {
+        todoList.todos[position] = newValue;
+        todoList.displayTodos();
+    },
+    deleteTodo: function (position) {
+        todoList.todos.splice(position, 1);
+        todoList.displayTodos();
+    }
 };
 
-function displayTodos() {
-    console.log('My Todos: ', todos);
-}
+todoList.displayTodos();
 
-displayTodos();
+todoList.addTodo('New todo test!');
 
-function addTodo(todo) {
-    todos.push(todo);
-    displayTodos();
-}
+todoList.changeTodo(0, 'Edit Item 1');
 
-addTodo('New todo test!');
-
-function changeTodo(position, newValue) {
-    todos[position] = newValue;
-    displayTodos();
-}
-
-changeTodo(0, 'Edit Item 1');
-
-function deleteTodo(position){
-    todos.splice(position, 1);
-    displayTodos();
-}
-
-deleteTodo(1);
+todoList.deleteTodo(1);
