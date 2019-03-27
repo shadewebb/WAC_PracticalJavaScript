@@ -8,9 +8,12 @@ function displayTodos() {
 
 displayTodos();
 
-todos.push('item 4');
+function addTodo(todo) {
+    todos.push(todo);
+    displayTodos();
+}
 
-console.log('My Todos: ', todos);
+addTodo('New todo test!');
 
 todos[0] = 'new item 1';
 
