@@ -1,7 +1,8 @@
 It should
 
-2   changeTodo method should change the todoText property
-3   toggleCompleted method should change the completed property true/false
+
 
 DONE!
 1   addTodo method should add objects
+2   changeTodo method should change the todoText property
+3   toggleCompleted method should change the completed property true/false
