@@ -3,10 +3,12 @@
 var todoList = {
     todos: [],
     displayTodos: function () {
+        console.log('My Todos:');
         for (var i = 0; i < this.todos.length; i++) {
             var todo = this.todos[i];
-            console.log('My Todos: ', todo.todoText, '-', todo.completed);
+            console.log(todo.todoText, '-', todo.completed);
         }
+        console.log('');
     },
     addTodo: function (todoText) {
         this.todos.push({
@@ -29,8 +31,6 @@ var todoList = {
         this.displayTodos();
     }
 };
-
-todoList.displayTodos();
 
 todoList.addTodo('New todo test!');
 
