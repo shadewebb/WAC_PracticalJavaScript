@@ -1,6 +1,7 @@
 It should
-1   have displayTodos method show .todoText property
-2   have displayTodos tell you if .todos (todo array) is empty
+
 3   have displayTodos show .completed boolean value
 
 DONE!
+1   have displayTodos method show .todoText property
+2   have displayTodos tell you if .todos (todo array) is empty

@@ -4,11 +4,17 @@ var todoList = {
     todos: [],
     displayTodos: function () {
         console.log('My Todos:');
-        for (var i = 0; i < this.todos.length; i++) {
-            var todo = this.todos[i];
-            console.log(todo.todoText, '-', todo.completed);
+        if (this.todos.length > 0) {
+            for (var i = 0; i < this.todos.length; i++) {
+                var todo = this.todos[i];
+                console.log(todo.todoText, '-', todo.completed);
+            }
+            console.log('');
+        } else {
+            console.log('Empty List!');
+            console.log('');
         }
-        console.log('');
+
     },
     addTodo: function (todoText) {
         this.todos.push({
@@ -31,6 +37,8 @@ var todoList = {
         this.displayTodos();
     }
 };
+
+todoList.displayTodos();
 
 todoList.addTodo('New todo test!');
 
