@@ -15,25 +15,30 @@
 
     <div class="tasklist-container">
       <div>
-        <button onclick="handlers.displayTodos()">Display tasks</button>
-        <button onclick="handlers.toggleAll()">Toggle all</button>
+        <button onclick="handlers.displayTodos()">Display Tasks</button>
+        <button onclick="handlers.toggleAll()">Complete All</button>
       </div>
 
       <div>
         <input type="text" id="addTodoTextInput">
-        <button onclick="handlers.addTodo()">Add Task</button>
+        <button onclick="handlers.addTodo()">Add</button>
       </div>
 
       <div>
         <input type="number" id="changeTodoPositionInput">
         <input type="text" id="changeTodoTextInput">
-        <button onclick="handlers.changeTodo()">Change Todo</button>
+        <button onclick="handlers.changeTodo()">Change</button>
       </div>
 
       <div>
         <input type="number" id="deleteTodoPositionInput">
-        <button onclick="handlers.deleteTodo()">Delete Todo</button>
+        <button onclick="handlers.deleteTodo()">Delete</button>
       </div>
+
+      <div>
+          <input type="number" id="toggleCompletedPositionInput">
+          <button onclick="handlers.toggleCompleted()">Completed</button>
+        </div>
     </div>
   </div>
 
