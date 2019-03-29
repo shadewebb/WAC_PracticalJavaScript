@@ -82,7 +82,7 @@ var handlers = {
     },
     deleteTodo: function() {
         var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
-        todoList.deleteTodo(deleteTodoPositionInput.value - 1);
+        todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber - 1);
         deleteTodoPositionInput.value = '';
     }
 }
