@@ -3,7 +3,6 @@
 var todoList = {
     todos: [],
     displayTodos: function () {
-        console.log('My Todos:');
         if (this.todos.length > 0) {
             for (var i = 0; i < this.todos.length; i++) {
                 var todo = this.todos[i];
@@ -11,7 +10,7 @@ var todoList = {
                     console.log('(x)', todo.todoText);
                 } else {
                     console.log('( )', todo.todoText);
-                }    
+                }
             }
             console.log('');
         } else {
@@ -62,16 +61,12 @@ var todoList = {
     }
 };
 
-todoList.displayTodos();
+var displayTodosButton = document.getElementById('displayTodosButton');
+var toggleAllButton = document.getElementById('toggleAllButton');
 
-todoList.addTodo('New todo test!');
-todoList.addTodo('Second test!');
-
-todoList.changeTodo(0, 'Edited first todo test...');
-
-todoList.toggleCompleted(0);
-
-todoList.toggleAll();
-todoList.toggleAll();
-
-todoList.deleteTodo(0);
+displayTodosButton.addEventListener('click', function () {
+    todoList.displayTodos();
+})
+toggleAllButton.addEventListener('click', function () {
+    todoList.toggleAll();
+})

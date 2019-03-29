@@ -1,0 +1,8 @@
+Skipped V6 requirements and implemented directly as it was only one function and not complex.
+
+It should
+
+
+DONE!
+    have "Display Todos" and "Toggle All" buttons
+    run relevant methods when buttons are clicked
