@@ -8,6 +8,7 @@
 
 /* Block Elements */
 .wrapper {
+    background-color: #eee;
     max-width: 980px;
     padding: 0px 10px;
     margin: auto;
@@ -15,5 +16,12 @@
 
 .page-title {
     font-size: 3rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.tasklist-container {
+    width: 90%;
+    margin: 0 auto;
     text-align: center;
 }
