@@ -1,0 +1,7 @@
+It should
+
+3   show .completed on each li element
+
+DONE!
+1   have a li for every todo
+2   show .todoText on each li element
