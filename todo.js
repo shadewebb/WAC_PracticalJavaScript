@@ -39,17 +39,39 @@ var todoList = {
         var todo = this.todos[position];
         todo.completed = !todo.completed;
         this.displayTodos();
+    },
+    toggleAll: function () {
+        var todos = this.todos;
+        var totalTodos = todos.length;
+        var completedTodos = 0;
+        for (var i = 0; i < totalTodos; i++) {
+            if (todos[i].completed === true) {
+                completedTodos++;
+            }
+        }
+        if (completedTodos === todos.length) {
+            for (var i = 0; i < totalTodos; i++) {
+                todos[i].completed = false;
+            }
+        } else {
+            for (var i = 0; i < totalTodos; i++) {
+                todos[i].completed = true;
+            }
+        }
+        this.displayTodos();
     }
 };
 
 todoList.displayTodos();
 
 todoList.addTodo('New todo test!');
+todoList.addTodo('Second test!');
 
-todoList.changeTodo(0, 'Edit Item 1');
+todoList.changeTodo(0, 'Edited first todo test...');
 
 todoList.toggleCompleted(0);
 
-todoList.toggleCompleted(0);
+todoList.toggleAll();
+todoList.toggleAll();
 
 todoList.deleteTodo(0);
