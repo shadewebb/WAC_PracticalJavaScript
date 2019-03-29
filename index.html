@@ -19,8 +19,21 @@
         <button onclick="handlers.toggleAll()">Toggle all</button>
       </div>
 
-      <input type="text" id="addTodoTextInput">
-      <button onclick="handlers.addTodo()">Add Task</button>
+      <div>
+        <input type="text" id="addTodoTextInput">
+        <button onclick="handlers.addTodo()">Add Task</button>
+      </div>
+
+      <div>
+        <input type="number" id="changeTodoPositionInput">
+        <input type="text" id="changeTodoTextInput">
+        <button onclick="handlers.changeTodo()">Change Todo</button>
+      </div>
+
+      <div>
+          <input type="number" id="deleteTodoPositionInput">
+          <button onclick="handlers.deleteTodo()">Delete Todo</button>
+        </div>
     </div>
   </div>
 

@@ -1,8 +1,9 @@
 It should have working controls
 
-2   for .changeTodo
+
 3   for .deleteTodo
 4   for .toggleCompleted
 
 DONE!
 1   for .addTodo
+2   for .changeTodo
