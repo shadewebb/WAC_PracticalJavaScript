@@ -53,20 +53,18 @@ var handlers = {
     changeTodo: function () {
         var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
         var changeTodoTextInput = document.getElementById('changeTodoTextInput');
-        todoList.changeTodo((changeTodoPositionInput.valueAsNumber - 1), changeTodoTextInput.value);
+        todoList.changeTodo((changeTodoPositionInput.valueAsNumber), changeTodoTextInput.value);
         changeTodoPositionInput.value = '';
         changeTodoTextInput.value = '';
         view.displayTodos();
     },
-    deleteTodo: function () {
-        var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
-        todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber - 1);
-        deleteTodoPositionInput.value = '';
+    deleteTodo: function (position) {
+        todoList.deleteTodo(position);
         view.displayTodos();
     },
     toggleCompleted: function () {
         var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
-        todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber - 1);
+        todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
         toggleCompletedPositionInput.value = '';
         view.displayTodos();
     }
@@ -87,6 +85,7 @@ var view = {
                 todoTextWithCompletion = '( ) ' + todo.todoText;
             }
 
+            todoLi.id = i;
             todoLi.textContent = todoTextWithCompletion;
             todoLi.appendChild(this.createDeleteButton());
             todosUl.appendChild(todoLi);
@@ -97,5 +96,17 @@ var view = {
         deleteButton.textContent = 'Delete';
         deleteButton.className = 'deleteButton';
         return deleteButton;
+    },
+    setupEventListeners: function () {
+        //Adds a single event listener to the ul element, rather than multiple event
+        //listeners to each individual deleteButton button element.
+        var todosUL = document.querySelector('ul');
+        todosUL.addEventListener('click', function (event) {
+            var elementClicked = event.target;
+            if (elementClicked.className === 'deleteButton') {
+                handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+            }
+        });
     }
+
 };
