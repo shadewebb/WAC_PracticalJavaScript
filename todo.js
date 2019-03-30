@@ -22,20 +22,20 @@ var todoList = {
         var todos = this.todos;
         var totalTodos = todos.length;
         var completedTodos = 0;
-        for (var i = 0; i < totalTodos; i++) {
-            if (todos[i].completed === true) {
+
+        todos.forEach(function (todo) {
+            if (todo.completed === true) {
                 completedTodos++;
             }
-        }
-        if (completedTodos === todos.length) {
-            for (var i = 0; i < totalTodos; i++) {
-                todos[i].completed = false;
+        });
+
+        this.todos.forEach(function (todo) {
+            if (completedTodos === todos.length) {
+                todo.completed = false;
+            } else {
+                todo.completed = true;
             }
-        } else {
-            for (var i = 0; i < totalTodos; i++) {
-                todos[i].completed = true;
-            }
-        }
+        });
     }
 };
 
