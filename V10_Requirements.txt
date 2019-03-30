@@ -1,7 +1,8 @@
 It should
-1   create delete buttons on li elements
+
 2   give li elements an id that has the todo position
 3   delete buttons should have access to todo id
 4   clicking delete should update todoList.todos and DOM
 
 DONE!
+1   create delete buttons on li elements
