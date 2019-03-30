@@ -1,0 +1,6 @@
+It should
+
+2   use forEach on view.displayTodos
+
+DONE!
+1   use forEach on todoList.toggleAll
