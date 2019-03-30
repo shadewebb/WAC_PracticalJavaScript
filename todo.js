@@ -30,7 +30,7 @@ var todoList = {
         });
 
         this.todos.forEach(function (todo) {
-            if (completedTodos === todos.length) {
+            if (completedTodos === totalTodos) {
                 todo.completed = false;
             } else {
                 todo.completed = true;
@@ -110,3 +110,5 @@ var view = {
     }
 
 };
+
+view.setupEventListeners();
